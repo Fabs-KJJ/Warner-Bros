@@ -1,0 +1,76 @@
+.navbar-official{
+    background-color: black;
+    opacity: 0.9;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 60px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+  
+.profile{
+    .options{
+        display: none;
+    }
+    span{
+        cursor: pointer;
+        padding: 10px;
+    }
+    &:hover {
+        .options{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+        }
+    }
+}
+.options{
+    background-color: #EA0085;
+    border-radius: 10px;
+    width: 10%;
+    height: 90px;
+    text-align: center;
+}
+.options:hover{
+    text-decoration: underline 2px;
+
+}
+.log{
+    border: none;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.log, button{
+    font-weight: bold;
+    background-color: #EA0085;
+}
+
+.profile-icon {
+    width: 30px; /* Set the width as needed */
+    height: 30px; /* Set the height as needed */
+    border-radius: 50%; /* Make it a circular shape */
+    margin-right: 10px; /* Add some spacing to the right */
+  }
+  
+  /* Add styling for the default profile picture */
+  .default-profile-icon {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid gold;
+  }
+  .navbar-start{
+    font-weight: 1000;
+  }
+  .navbar-start:hover{
+    color: gold;
+
+  }

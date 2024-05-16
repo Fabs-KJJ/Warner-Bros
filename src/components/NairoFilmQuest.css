@@ -1,0 +1,250 @@
+body{
+    background-color: #141414 !important;
+
+}
+.content img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    text-align: center; 
+    color: #333333; 
+    font-size: 1.2rem;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+}
+.featured-posters::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    z-index: 2;
+}
+.featured-content{
+    display: flex;
+    justify-content: center !important;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.content{
+    /* position: relative;
+    display: grid;
+    grid-template-columns: 1fr; /* One column for the description */
+    /* grid-template-rows: auto; /* Automatic height for the rows */
+    /* gap: 10px; */ 
+    background-position: top;
+    background-size: cover;
+    overflow: hidden; /* Hide any overflowing content (e.g., images) */
+}
+
+    .info{
+        position: absolute;
+        left: 50px;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        color: #F699BE;
+        width: 80%;
+        align-items: flex-start;
+    }
+    .runtime{
+        width: 150px;
+        color: #333333;
+        font-weight: 600;
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+    }
+    .imagetext{
+        width: 50px;
+    }
+    .desc{
+        grid-area: description;
+        font-size: 20px;
+        line-height: 20px;
+        color:  #333333;;
+        max-height: 108px;
+        text-align: left;
+        font-weight: 500;
+    }
+.custom-arrow{
+    border: none;
+    background-color: transparent;
+    color: #FFD700;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.custom-prev-arrow{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.custom-next-arrow{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ .film-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+  gap: 30px;
+  width: 300px;
+  opacity: 0.8;
+  cursor: pointer;
+  margin: 10px; 
+  transition: opacity 0.3s; 
+}
+.film-item{
+    position: relative; 
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    border: 2px solid transparent;
+    border-width: 10px;
+    color: white;
+    align-items: center;
+    overflow: hidden; 
+  transition: transform 0.3s;
+}
+.film-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+  }
+.film-item:hover .film-posters-featured{
+    border: 2px solid gray;
+    transform: scale(1.1);
+}
+  .film-posters-featured{
+    width: 250px;
+    height: 300px;
+  }
+  .film-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    z-index: 1;
+    text-align: left; 
+    margin-top: 10px; 
+    justify-content: center;
+  }
+  .release-year{
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .film-item:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    transition: border 0.3s;
+  }
+.image-container{
+    height: 95vh; 
+    overflow: hidden; 
+    width: 100%;
+}
+.image-container img {
+    width: 100%; 
+    height: 100%;  
+    object-fit: cover;   
+}
+.typography{
+    font-size: 4rem;
+    font-weight: 700;
+    flex-direction: column;
+    white-space: nowrap;
+    line-height: normal;
+    float: left !important;
+}
+.analytics{
+    display: flex;
+    flex-direction: row;
+}
+.trailers{
+    border: none;
+    width: 200px;
+    height: 45px;
+    font-weight: 700;
+    background-color: #EA0085;
+    border-radius: 30px;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .content img {
+        padding: 10px;
+    }
+
+    .info {
+        left: 5%;
+        bottom: 5%;
+        width: 90%;
+    }
+
+    .custom-arrow {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .custom-prev-arrow,
+    .custom-next-arrow {
+        left: 5px;
+        right: 5px;
+    }
+
+    .film-container {
+        width: 90%;
+        padding: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        /* Adjust styles for smaller screens */
+        padding: 10px; /* Example: Add padding to give more space */
+    }
+}
+
+/* Responsive styles for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+    .content {
+        /* Further adjustments for smaller screens */
+        padding: 5px;
+        /* Adjust font sizes, spacing, or other styles as needed */
+    }
+}
